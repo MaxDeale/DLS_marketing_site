@@ -1,4 +1,4 @@
-# Use static export output
+# Use Netlify Next.js plugin — set a non-root publish dir so the plugin can run
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"
