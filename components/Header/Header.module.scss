@@ -43,6 +43,16 @@
   }
 }
 
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  color: $logo-red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .logoText {
   @media (max-width: $breakpoint-sm) {
     display: none;

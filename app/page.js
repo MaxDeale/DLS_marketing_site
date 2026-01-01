@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <Logo size="hero" showText={true} variant="hero" />
+          <Logo size="hero" variant="hero" />
           <div className={styles.heroBadge}>Document Intelligence Platform</div>
           <h1 className={styles.heroTitle}>
             Transform Legal Document Processing with{' '}

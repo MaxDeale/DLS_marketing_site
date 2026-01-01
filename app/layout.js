@@ -7,6 +7,11 @@ export const metadata = {
   description: 'Enterprise document intelligence and case material processing platform for law firms. Source-grounded document classification, extraction, and retrieval.',
   keywords: 'legal tech, document intelligence, case material processing, law firm software, legal document analysis',
   authors: [{ name: 'Deale Legal Systems' }],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: 'Deale Legal Systems | Document Intelligence for Law Firms',
     description: 'Enterprise document intelligence and case material processing platform for law firms.',

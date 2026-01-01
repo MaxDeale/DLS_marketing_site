@@ -30,7 +30,21 @@ export default function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink}>
-          <Logo size="small" showText={false} />
+          <div className={styles.logoIcon}>
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 45 L50 25 L80 45 L50 65 Z" fill="#1a0d2e" stroke="#000000" stroke-width="1.2"/>
+              <rect x="24" y="42" width="52" height="4.5" fill="#dc2626"/>
+              <rect x="26" y="48" width="48" height="4.5" fill="#dc2626"/>
+              <rect x="28" y="54" width="44" height="4.5" fill="#dc2626"/>
+              <rect x="30" y="60" width="40" height="3.5" fill="#dc2626"/>
+              <path d="M20 45 L20 75 L50 85 L50 65 Z" fill="#1a0d2e" stroke="#000000" stroke-width="1.2"/>
+              <rect x="22" y="50" width="4.5" height="25" fill="#dc2626"/>
+              <rect x="28" y="52" width="4.5" height="23" fill="#dc2626"/>
+              <rect x="34" y="54" width="4.5" height="21" fill="#dc2626"/>
+              <rect x="40" y="56" width="4.5" height="19" fill="#dc2626"/>
+              <path d="M50 65 L80 45 L80 75 L50 85 Z" fill="#dc2626" stroke="#000000" stroke-width="1.2"/>
+            </svg>
+          </div>
           <span className={styles.logoText}>Deale Legal Systems</span>
         </Link>
 

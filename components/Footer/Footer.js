@@ -10,7 +10,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.brand}>
-            <Logo size="default" showText={true} />
+            <Logo size="default" variant="footer" />
             <p className={styles.tagline}>
               Document intelligence infrastructure for law firms.
             </p>
