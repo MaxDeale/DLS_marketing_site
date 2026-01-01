@@ -1,0 +1,116 @@
+@import '../../styles/variables.scss';
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.logoMain {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logoSub {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-size: $font-size-lg;
+  color: $text-primary;
+  letter-spacing: 1px;
+  font-weight: $font-weight-medium;
+}
+
+.decorativeLine {
+  color: $text-primary;
+  font-weight: $font-weight-normal;
+}
+
+// Size variants
+.small {
+  .logoIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logoMain {
+    font-size: $font-size-xl;
+  }
+
+  .logoSub {
+    font-size: $font-size-sm;
+  }
+}
+
+.default {
+  .logoIcon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.large {
+  .logoIcon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logoMain {
+    font-size: $font-size-5xl;
+  }
+
+  .logoSub {
+    font-size: $font-size-xl;
+  }
+}
+
+.hero {
+  .logoIcon {
+    width: 160px;
+    height: 160px;
+  }
+
+  .logoMain {
+    font-size: 4rem;
+    letter-spacing: 4px;
+  }
+
+  .logoSub {
+    font-size: $font-size-2xl;
+    gap: $spacing-md;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    .logoIcon {
+      width: 120px;
+      height: 120px;
+    }
+
+    .logoMain {
+      font-size: 3rem;
+    }
+
+    .logoSub {
+      font-size: $font-size-xl;
+    }
+  }
+}
+

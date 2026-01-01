@@ -1,0 +1,192 @@
+@import '../../styles/variables.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(26, 13, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: all $transition-base;
+
+  &.scrolled {
+    background-color: rgba(26, 13, 46, 0.95);
+    border-bottom-color: $border-color;
+    box-shadow: $shadow-md;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: $spacing-md $spacing-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-sm $spacing-md;
+  }
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  transition: opacity $transition-base;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logoText {
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-md) {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: $primary-dark;
+    border-top: 1px solid $border-color;
+    padding: $spacing-lg;
+    gap: $spacing-md;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all $transition-base;
+
+    &.navOpen {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.navLink {
+  color: $text-secondary;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color $transition-base;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $gradient-accent;
+    transition: width $transition-base;
+  }
+
+  &:hover {
+    color: $text-primary;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-sm 0;
+    border-bottom: 1px solid $border-color;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.ctaButton {
+  padding: $spacing-xs $spacing-md;
+  background: $gradient-accent;
+  color: $text-primary;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    margin-top: $spacing-sm;
+    text-align: center;
+  }
+}
+
+.mobileMenuButton {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-xs;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-md) {
+    display: flex;
+  }
+
+  span {
+    width: 24px;
+    height: 2px;
+    background-color: $text-primary;
+    transition: all $transition-base;
+    border-radius: $radius-sm;
+
+    &:nth-child(1) {
+      transform-origin: top left;
+    }
+
+    &:nth-child(2) {
+      transform-origin: center;
+    }
+
+    &:nth-child(3) {
+      transform-origin: bottom left;
+    }
+
+    &.open {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+

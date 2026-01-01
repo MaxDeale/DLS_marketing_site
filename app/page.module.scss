@@ -1,0 +1,322 @@
+@import '../styles/variables.scss';
+
+.home {
+  padding-top: 80px;
+}
+
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $gradient-primary;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(26, 13, 46, 0.3) 0%, rgba(15, 5, 25, 0.8) 100%);
+    pointer-events: none;
+  }
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: $spacing-3xl $spacing-lg;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl $spacing-md;
+  }
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: $spacing-xs $spacing-md;
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: $radius-lg;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $accent;
+  margin-bottom: $spacing-lg;
+  margin-top: $spacing-xl;
+}
+
+.heroTitle {
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-lg;
+  color: $text-primary;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.gradientText {
+  background: $gradient-accent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroDescription {
+  font-size: $font-size-xl;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacing-xl;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-lg;
+  }
+}
+
+.heroCta {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  margin-bottom: $spacing-xl;
+  flex-wrap: wrap;
+}
+
+.disclaimer {
+  margin-top: $spacing-xl;
+  padding: $spacing-md;
+  background: rgba(160, 174, 192, 0.1);
+  border-left: 3px solid $logo-red;
+  border-radius: $radius-md;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    margin: 0;
+    font-size: $font-size-sm;
+    color: $text-muted;
+    line-height: $line-height-relaxed;
+
+    strong {
+      color: $text-secondary;
+    }
+  }
+}
+
+.valueProp {
+  padding: $spacing-3xl 0;
+  background-color: $primary-light;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.valuePropContent {
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-md;
+  text-align: center;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.sectionDescription {
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  max-width: 700px;
+  margin: 0 auto $spacing-2xl;
+  text-align: center;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-xl;
+  margin-top: $spacing-2xl;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  padding: $spacing-xl;
+  background: rgba(26, 31, 58, 0.5);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: $logo-red;
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  color: $logo-red;
+  margin-bottom: $spacing-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature h3 {
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-sm;
+  color: $text-primary;
+}
+
+.feature p {
+  color: $text-secondary;
+  margin: 0;
+  line-height: $line-height-relaxed;
+}
+
+.workflow {
+  padding: $spacing-3xl 0;
+  background-color: $primary;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.workflowSteps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: $spacing-lg;
+  margin-top: $spacing-2xl;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.step {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  padding: $spacing-xl;
+  text-align: center;
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 100%;
+  }
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto $spacing-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $gradient-accent;
+  color: $text-primary;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.step h3 {
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-sm;
+  color: $text-primary;
+}
+
+.step p {
+  color: $text-secondary;
+  margin: 0;
+  line-height: $line-height-relaxed;
+}
+
+.stepArrow {
+  font-size: $font-size-3xl;
+  color: $logo-red;
+  margin-top: $spacing-xl;
+  font-weight: $font-weight-bold;
+
+  @media (max-width: $breakpoint-md) {
+    transform: rotate(90deg);
+    margin: $spacing-sm 0;
+  }
+}
+
+.ctaSection {
+  padding: $spacing-3xl 0;
+  background: $gradient-primary;
+  text-align: center;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: $font-size-4xl;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+    margin-bottom: $spacing-xl;
+  }
+}
+

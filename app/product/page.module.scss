@@ -1,0 +1,246 @@
+@import '../../styles/variables.scss';
+
+.product {
+  padding-top: 80px;
+}
+
+.hero {
+  padding: $spacing-3xl 0;
+  background: $gradient-primary;
+  text-align: center;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: $font-size-5xl;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-4xl;
+    }
+  }
+}
+
+.subtitle {
+  font-size: $font-size-xl;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-lg;
+  }
+}
+
+.pipeline {
+  padding: $spacing-3xl 0;
+  background-color: $primary-light;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.sectionTitle {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-md;
+  text-align: center;
+  color: $text-primary;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.sectionDescription {
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  max-width: 700px;
+  margin: 0 auto $spacing-2xl;
+  text-align: center;
+  line-height: $line-height-relaxed;
+}
+
+.pipelineSteps {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pipelineStep {
+  background: rgba(26, 31, 58, 0.5);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: $logo-red;
+    box-shadow: $shadow-md;
+  }
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+.stepIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $gradient-accent;
+  color: $text-primary;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.stepHeader h3 {
+  font-size: $font-size-2xl;
+  margin: 0;
+  color: $text-primary;
+}
+
+.stepContent {
+  p {
+    color: $text-secondary;
+    margin-bottom: $spacing-md;
+    line-height: $line-height-relaxed;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-sm;
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      padding-left: $spacing-md;
+      position: relative;
+      color: $text-secondary;
+      line-height: $line-height-relaxed;
+
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: $logo-red;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+.features {
+  padding: $spacing-3xl 0;
+  background-color: $primary;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-xl;
+  margin-top: $spacing-2xl;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featureCard {
+  padding: $spacing-xl;
+  background: rgba(26, 31, 58, 0.5);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: $logo-red;
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+
+  h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-sm;
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+    margin: 0;
+    line-height: $line-height-relaxed;
+  }
+}
+
+.disclaimer {
+  padding: $spacing-3xl 0;
+  background-color: $primary-dark;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.disclaimerBox {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+  background: rgba(160, 174, 192, 0.1);
+  border-left: 4px solid $logo-red;
+  border-radius: $radius-md;
+
+  h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: $spacing-md;
+    line-height: $line-height-relaxed;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: $text-primary;
+    }
+  }
+}
+

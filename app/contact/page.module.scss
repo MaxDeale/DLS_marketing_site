@@ -1,0 +1,239 @@
+@import '../../styles/variables.scss';
+
+.contact {
+  padding-top: 80px;
+}
+
+.hero {
+  padding: $spacing-3xl 0;
+  background: $gradient-primary;
+  text-align: center;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: $font-size-5xl;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-4xl;
+    }
+  }
+}
+
+.subtitle {
+  font-size: $font-size-xl;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-lg;
+  }
+}
+
+.formSection {
+  padding: $spacing-3xl 0;
+  background-color: $primary-light;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+}
+
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto $spacing-2xl;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+
+  h2 {
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: $line-height-relaxed;
+  }
+}
+
+.form {
+  background: rgba(26, 31, 58, 0.5);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formGroup {
+  margin-bottom: $spacing-md;
+
+  label {
+    display: block;
+    margin-bottom: $spacing-xs;
+    color: $text-primary;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: $spacing-sm;
+    background: rgba(15, 5, 25, 0.5);
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    color: $text-primary;
+    font-size: $font-size-base;
+    font-family: inherit;
+    transition: all $transition-base;
+
+    &:focus {
+      outline: none;
+      border-color: $logo-red;
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    }
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.submitButton {
+  width: 100%;
+  padding: $spacing-md $spacing-xl;
+  background: $gradient-accent;
+  color: $text-primary;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.successMessage {
+  text-align: center;
+  padding: $spacing-2xl;
+  background: rgba(26, 31, 58, 0.5);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+
+  h2 {
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: $line-height-relaxed;
+    font-size: $font-size-lg;
+  }
+}
+
+.infoBox {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+  background: rgba(26, 31, 58, 0.5);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+
+  h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-left: $spacing-lg;
+      position: relative;
+      color: $text-secondary;
+      margin-bottom: $spacing-sm;
+      line-height: $line-height-relaxed;
+
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: $logo-red;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+.disclaimer {
+  padding: $spacing-xl 0;
+  background-color: $primary-dark;
+}
+
+.disclaimerBox {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: $spacing-md;
+  background: rgba(160, 174, 192, 0.1);
+  border-left: 3px solid $logo-red;
+  border-radius: $radius-md;
+
+  p {
+    margin: 0;
+    color: $text-muted;
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+
+    strong {
+      color: $text-secondary;
+    }
+  }
+}
+
