@@ -1,0 +1,4 @@
+# Use static export output
+[build]
+  command = "npm run build"
+  publish = "out"
